@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# environments
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# python / ml
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# misc
+.DS_Store
+*.log
