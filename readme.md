@@ -380,13 +380,11 @@ diabetescare/
 
 | Member | Role |
 |---|---|
-| Team Member 1 | ML Engineer |
-| Team Member 2 | Backend Developer |
-| Team Member 3 | Frontend Developer |
-| Team Member 4 | Data Analyst |
+| Aditya Nambiar | ML Engineer & Full Stack Developer |
+| Risa Rebello | Frontend Developer & UI Designer |
+| Amrita Pati | Data Analyst & Backend Developer |
 
 **Course:** Artificial Intelligence Laboratory  
-**Institution:** [Your Institution Name]  
 **Date:** March 2026
 
 ---
