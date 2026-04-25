@@ -12,7 +12,7 @@
 
 ## 📌 Project Overview
 
-**DiabetesCare** is a machine learning-powered web application that predicts a person's risk of developing diabetes based on 8 basic health metrics. The system uses a **Logistic Regression model** trained on the **PIMA Indian Diabetes Dataset**, combined with **Claude AI** for personalized health recommendations.
+**DiabetesCare** is a machine learning-powered web application that predicts a person's risk of developing diabetes based on 8 basic health metrics. The system uses a **Logistic Regression model** trained on the **PIMA Indian Diabetes Dataset**, combined with **OpenRouter AI** for personalized health recommendations.
 
 ### Real-World Use Cases
 - 🏥 **Primary care clinics** — Assists doctors in identifying at-risk patients
@@ -44,7 +44,7 @@ Node.js saves to MongoDB Atlas
     ↓
 Results displayed to user
     ↓
-Claude AI generates recommendations
+OpenRouter AI generates recommendations
 ```
 
 ---
@@ -91,7 +91,7 @@ Claude AI generates recommendations
 | Technology | Purpose |
 |---|---|
 | MongoDB Atlas | Cloud Database |
-| Claude AI API | Health Recommendations |
+| OpenRouter API | Health Recommendations |
 
 ---
 
@@ -273,7 +273,8 @@ diabetescare/
 │   ├── controllers/
 │   │   ├── authController.js     ← Register, login, getMe
 │   │   ├── predictController.js  ← Calls ML service, saves result
-│   │   └── historyController.js  ← CRUD for predictions
+│   │   ├── historyController.js  ← CRUD for predictions
+│   │   └── aiController.js       ← AI recommendations
 │   ├── middleware/
 │   │   ├── authMiddleware.js     ← JWT verification
 │   │   └── errorMiddleware.js    ← Global error handler
@@ -283,7 +284,8 @@ diabetescare/
 │   ├── routes/
 │   │   ├── authRoutes.js         ← /api/auth
 │   │   ├── predictRoutes.js      ← /api/predict
-│   │   └── historyRoutes.js      ← /api/history
+│   │   ├── historyRoutes.js      ← /api/history
+│   │   └── aiRoutes.js           ← /api/ai
 │   ├── server.js                 ← Express entry point
 │   ├── .env                      ← Environment variables
 │   └── package.json
@@ -321,6 +323,11 @@ diabetescare/
 | GET | `/api/history` | Get all predictions | ✅ |
 | GET | `/api/history/:id` | Get single prediction | ✅ |
 | DELETE | `/api/history/:id` | Delete prediction | ✅ |
+
+### AI Routes (`/api/ai`)
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| POST | `/api/ai/recommend` | Get AI recommendations | ✅ |
 
 ### ML Service Routes (`localhost:8000`)
 | Method | Endpoint | Description |
@@ -391,5 +398,5 @@ diabetescare/
 ---
 
 <div align="center">
-  Built with ❤️ using React, Node.js, Python & Claude AI
+  Built with ❤️ using React, Node.js, Python & OpenRouter AI
 </div>
